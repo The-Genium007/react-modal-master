@@ -18,8 +18,7 @@ import 'react-modal-master/styles.css';
 
 ```jsx
 import { Modal } from 'react-modal-master';
-import { useModal } from 'react-modal-master/hooks';
-import 'react-modal-master/styles.css'; // optionnel
+import 'react-modal-master/styles.css';
 
 export const Demo = () => {
   const modal = useModal();

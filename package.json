@@ -43,6 +43,7 @@
   "types": "dist/index.d.ts",
   "main": "dist/react-modal-master.cjs.js",
   "module": "dist/react-modal-master.es.js",
+  "style": "dist/react-modal-master.css",
   "exports": {
     ".": {
       "import": "./dist/react-modal-master.es.js",
