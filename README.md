@@ -1,72 +1,48 @@
-# React Modal Component - Version CSS Pure
+# react-modal-master
 
-Un composant modal React simple et léger utilisant uniquement du CSS personnalisé.
+Modal React légère + hook `useModal`.
 
-Composant modal moderne avec fermeture automatique (ESC, clic extérieur), spinner de chargement intégré, animations CSS fluides et 100% personnalisable. Code JavaScript pur avec PropTypes pour la validation des props.
-
-## 🚀 Démarrage Rapide
+## Installation
 
 ```bash
-npm install
-npm run dev
+npm install react-modal-master
 ```
 
-## 📋 Utilisation de Base
+Optionnel (styles par défaut) :
 
-### Import
-```javascript
-import { Modal } from './components/Modal';
-import { useModal } from './hooks/useModal';
+```js
+import 'react-modal-master/styles.css';
 ```
 
-### Utilisation simple
-```javascript
-const MyComponent = () => {
+## Démarrage rapide
+
+```jsx
+import { Modal } from 'react-modal-master';
+import { useModal } from 'react-modal-master/hooks';
+import 'react-modal-master/styles.css'; // optionnel
+
+export const Demo = () => {
   const modal = useModal();
 
   return (
-    <div>
-      <button onClick={modal.openModal}>
-        Ouvrir la modal
-      </button>
-
-      <Modal isOpen={modal.isOpen} onClose={modal.closeModal}>
-        <h2>Ma Modal</h2>
-        <p>Contenu de la modal</p>
+    <>
+      <button onClick={modal.openModal}>Ouvrir</button>
+      <Modal isOpen={modal.isOpen} onClose={modal.closeModal} showSpinner={modal.isLoading}>
+        <h2>Bonjour 👋</h2>
+        <p>Votre contenu ici.</p>
         <button onClick={modal.closeModal}>Fermer</button>
       </Modal>
-    </div>
+    </>
   );
 };
 ```
 
-### Modal avec chargement
-```javascript
-const LoadingExample = () => {
-  const modal = useModal();
+## Hook résumé
 
-  const handleLoad = async () => {
-    modal.openModal();
-    modal.startLoading();
-    
-    // Simuler un appel API
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    modal.stopLoading();
-  };
-
-  return (
-    <Modal 
-      isOpen={modal.isOpen} 
-      onClose={modal.closeModal}
-      showSpinner={modal.isLoading}
-    >
-      {!modal.isLoading && (
-        <div>
-          <h2>Contenu chargé !</h2>
-          <button onClick={modal.closeModal}>Fermer</button>
-        </div>
-      )}
-    </Modal>
-  );
-};
+```js
+const { isOpen, openModal, closeModal, isLoading, startLoading, stopLoading } = useModal();
 ```
+
+## Licence
+
+MIT
