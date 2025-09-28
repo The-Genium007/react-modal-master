@@ -2,22 +2,37 @@
 
 Modal React légère + hook `useModal`.
 
+## Prérequis
+
+Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur votre machine :
+
+- **Node.js** : version 16.0.0 ou supérieure
+- **npm** : version 8.0.0 ou supérieure (ou **yarn** version 1.22.0+)
+- **React** : version 17.0.0 ou supérieure
+
+### Éditeur recommandé
+
+- **Visual Studio Code** avec les extensions suivantes :
+  - ES7+ React/Redux/React-Native snippets
+  - Prettier - Code formatter
+  - ESLint
+
 ## Installation
 
 ```bash
 npm install react-modal-master
 ```
 
-Optionnel (styles par défaut) :
+ou avec yarn :
 
-```js
-import 'react-modal-master/styles.css';
+```bash
+yarn add react-modal-master
 ```
 
 ## Démarrage rapide
 
 ```jsx
-import { Modal } from 'react-modal-master';
+import { Modal, useModal } from 'react-modal-master';
 import 'react-modal-master/styles.css';
 
 export const Demo = () => {

@@ -1,7 +1,7 @@
 {
   "name": "react-modal-master",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Modal React légère avec hook useModal et spinner CSS, aucune dépendance UI.",
   "type": "module",
   "keywords": [

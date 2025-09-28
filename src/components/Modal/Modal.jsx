@@ -71,7 +71,7 @@ export const Modal = ({
   );
 };
 
-// Validation des props avec PropTypes
+// Validation des props avec PropTypes (props parent <--> enfant)
 Modal.propTypes = {
   isOpen: PropTypes.bool.isRequired,        // Modal ouverte ou fermée ?
   onClose: PropTypes.func.isRequired,      // Fonction pour fermer la modal
